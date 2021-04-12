@@ -1,0 +1,21 @@
+{
+    "name": "BBBTwitch",
+    "version": "0.01",
+    "manifest_version": 2,
+    "author": "Samuel Sundh",
+    "description": "Adds Twitch emotes to the BBB chat",
+    "content_scripts": [
+       {
+           "matches": ["https://bbb.ssis.nu/*"],
+           "js": ["content.js"],
+           "run_at": "document_end"
+       } 
+    ],
+    "permissions": [
+        "tabs", "https://bbb.ssis.nu/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "BBB Twitch Emotes"
+    }
+}
